@@ -44,7 +44,7 @@ bzip2recover: bzip2recover.o
 	$(CC) $(CFLAGS) $(LDFLAGS) -o bzip2recover bzip2recover.o
 
 libbz2.a: $(OBJS)
-	rm -f libbz2.a
+	del  libbz2.a
 	$(AR) cq libbz2.a $(OBJS)
 	@if ( test -f $(RANLIB) -o -f /usr/bin/ranlib -o \
 		-f /bin/ranlib -o -f /usr/ccs/bin/ranlib ) ; then \
