@@ -21,6 +21,7 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
+
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: 'C:\LDRA_Workarea_C_CPP_10.0.3\libbz2.a_tbwrkfls\libbz2.a_reports\'
@@ -28,3 +29,9 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
+
+task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(Pipeline.Workspace)'
+        artifact: 'zip'
+        publishLocation: 'pipeline'
