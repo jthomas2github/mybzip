@@ -12,6 +12,8 @@ steps:
 - script: | 
     c:\LDRA_Toolsuite_C_CPP_10.0.3\contbbuildimport -build_cmd="mingw32-make bzip2" -startin_dir=%CD% -build -quit
     c:\LDRA_Toolsuite_C_CPP_10.0.3\contestbed libbz2.a.btf /11234q
+    mkdir TestResults
+    copy C:\LDRA_Workarea_C_CPP_10.0.3\libbz2.a_tbwrkfls\libbz2.a_reports\libbz2.a.rps.htm TestResults
   displayName: 'Run a one-line script'
 
 - script: |
@@ -22,4 +24,4 @@ steps:
 - task: LakshayKaushik.PublishHTMLReports.publishhtmlreport.publishhtmlreport@1
   inputs:
     htmlType: 'genericHTML'
-    reportDir: 'C:\LDRA_Workarea_C_CPP_10.0.3\libbz2.a_tbwrkfls\libbz2.a_reports\libbz2.a.rps.htm'
+    reportDir: 'TestResults\libbz2.a.rps.htm'
