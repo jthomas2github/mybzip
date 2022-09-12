@@ -19,6 +19,6 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: PublishHtmlReport@1
+- task: LakshayKaushik.PublishHTMLReports.publishhtmlreport.publishhtmlreport@1
   inputs:
     reportDir: 'c:\LDRA_Workarea_C_CPP_10.0.3\libbz2.a_tbwrkfls\'
