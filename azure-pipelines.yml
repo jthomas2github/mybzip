@@ -23,7 +23,7 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: 'C:\LDRA_Workarea_C_CPP_10.0.3\libbz2.a_tbwrkfls\libbz2.a_reports\sssssssssssssssssssssssssssssssssssssssssssssssssssssssssss'
+    rootFolderOrFile: 'C:\LDRA_Workarea_C_CPP_10.0.3\libbz2.a_tbwrkfls\libbz2.a_reports\'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
