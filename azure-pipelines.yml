@@ -31,7 +31,7 @@ steps:
     replaceExistingArchive: true
 
 task: PublishPipelineArtifact@1
-      inputs:
-        targetPath: '$(Pipeline.Workspace)'
-        artifact: 'zip'
-        publishLocation: 'pipeline'
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'zip'
+    publishLocation: 'pipeline'
