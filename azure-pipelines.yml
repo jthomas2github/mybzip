@@ -32,6 +32,6 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Pipeline.Workspace)'
+    targetPath: 'C:\LDRA_Workarea_C_CPP_10.0.3\libbz2.a_tbwrkfls\libbz2.a_reports\'
     artifact: 'zip'
     publishLocation: 'pipeline'
