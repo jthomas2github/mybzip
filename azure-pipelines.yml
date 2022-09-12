@@ -21,8 +21,10 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-
-    - task: publishhtmlreport@1
-      inputs:
-        htmlType: 'genericHTML'
-        htmlPath: 'TestResults\libbz2.a.rps.htm'
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: 'TestResults\'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
